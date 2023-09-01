@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+		<style>
+			body{
+        font-family: Nunito, Arial;
+        margin: 0;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.4vw;
+        background: white;
+        border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+        box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+      }
+
+      .home-button{
+        font-family: Nunito, Arial;
+        background-color: transparent;
+        font-weight:bold;
+        border:none;
+        color: rgb(14,14,14);
+        cursor: pointer;
+        position: absolute;
+        top: 1.8vw;
+        left: 5%;
+        font-size: 2vw;
+        padding: 0.5vw; 
+        border-radius: 10px;
+      }
+
+      .home-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+
+      .category-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: transparent;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .category-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+      .current-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: rgb(3, 13, 99);
+        color: white;
+        font-weight:  bold;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .current-button:hover{
+        background-color: rgb(3, 13, 99);
+      }
+      .content{
+        margin-top: 50px;
+        margin-left: 100px;
+      }
+
+      .header-content{
+        font-size: 50px;
+        font-weight: bold;
+      }
+
+      .bbt-container{
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 10px;
+        margin-right: 250px;
+        margin-left: 27px;
+        margin-bottom: 40px;
+
+      }
+
+      .food-image{
+        margin-right: 20px;
+        width: 400px;
+        border-radius: 15px;
+      }
+
+      .bbt-review{
+        margin-top: 0;
+        margin-left: 8px;
+        font-size: 33px;
+      }
+
+      .stars{
+        margin-bottom: 0;
+        margin-left: 27px;
+      }
+
+      .menu-button{
+        margin-top: -5px;
+        cursor: pointer;
+        margin-left: 27px;
+        background-color: transparent;
+        border-style: none;
+        color: rgb(38, 10, 98);
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .menu-button:hover{
+        text-decoration: underline;
+      }
+
+      .my-thoughts{
+        line-height: 20px;
+        margin-left: 50px;
+        font-size: 15px;
+      }
+
+      .back-button{
+        background-color: transparent;
+        font-size: 15px;
+        border-style: none;
+        cursor: pointer;
+      }
+      .btn {
+
+                margin-left: 1.5vw;
+                margin-top: -20px;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                transition: all 0.15s ease-in-out;
+                font-size: 15px;
+                font-family: Nunito, Arial;
+                font-weight: light;
+                display: flex;
+                align-items: center;
+                background: white;
+                color: black;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                box-shadow: 0 0 20px 0px #2e2e2e3a;
+            }
+
+            .btn .icon {
+                position: absolute;
+                height: 1px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.25s;
+            }
+
+            .btn .text {
+                transform: translateX(55px);
+            }
+
+            .btn:hover .icon {
+                width: 100px;
+            }
+
+            .btn:hover .text {
+                transition: all 0.5s;
+                opacity: 0;
+            }
+
+            .btn:focus {
+                outline: none;
+            }
+
+            .btn:active .icon {
+                transform: scale(0.85);
+            }
+      
+            .new_footer_top {
+          padding: 120px 0px 270px;
+          position: relative;
+            overflow-x: hidden;
+      }
+      .new_footer_area .footer_bottom {
+          padding-top: 5px;
+          padding-bottom: 50px;
+      }
+
+      .new_footer_top .company_widget .f_subscribe_two .btn_get {
+          border-width: 1px;
+          margin-top: 20px;
+      }
+
+      .new_footer_top .f_widget.about-widget .f_list li a:hover {
+          color: #5e2ced;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li {
+          margin-bottom: 11px;
+      }
+      .f_widget.about-widget .f_list li:last-child {
+          margin-bottom: 0px;
+      }
+      .f_widget.about-widget .f_list li {
+          margin-bottom: 15px;
+      }
+      .f_widget.about-widget .f_list {
+          margin-bottom: 0px;
+      }
+
+      .new_footer_top .f_social_icon a:hover {
+          background: #5e2ced;
+          border-color: #5e2ced;
+        color:white;
+      }
+      .new_footer_top .f_social_icon a + a {
+          margin-left: 4px;
+      }
+      .new_footer_top .f-title {
+          margin-bottom: 30px;
+          color: #263b5e;
+      }
+      .f_600 {
+          font-weight: 600;
+      }
+      .f_size_18 {
+          font-size: 18px;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          color: #4b505e;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li a {
+          color: #6a7695;
+      }
+
+
+      .new_footer_top .footer_bg {
+          position: absolute;
+          bottom: 0;
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+          width: 100%;
+          height: 266px;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_one {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+          width: 330px;
+          height: 105px;
+        background-size:100%;
+          position: absolute;
+          bottom: 0;
+          left: 30%;
+          -webkit-animation: myfirst 22s linear infinite;
+          animation: myfirst 22s linear infinite;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_two {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+        background-size:100%;
+          bottom: 0;
+          left: 38%;
+          position: absolute;
+          -webkit-animation: myfirst 30s linear infinite;
+          animation: myfirst 30s linear infinite;
+      }
+
+      .footer-bottom{
+        color: gray;
+      }
+
+      @-moz-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @-webkit-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      
+
+		</style>
+	</head>
+
+	<body>
+    <div class="header">
+      <a href="index.html">
+        <button class="home-button">
+          CityScape Glimpses
+        </button>
+      </a>
+      <div class="categorry-buttons-container">
+        <a href="eats.html">
+          <button class="category-button">
+            Eats
+          </button>
+        </a>
+        <a href="bubbletea.html">
+          <button class="current-button">
+            Bubble Tea
+          </button>
+        </a>
+        <a href="grocery.html">
+          <button class="category-button">
+            Grocery
+          </button>
+        </a>
+        <a href="shopping.html">
+          <button class="category-button">
+            Shopping
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+      <a href="home2.html">
+        <button class="btn">
+          <span class="icon">
+              <svg viewBox="0 0 175 80" width="40" height="40">
+                  <rect width="80" height="15" fill="##000000" rx="10"></rect>
+                  <rect y="30" width="80" height="15" fill="#000000" rx="10"></rect>
+                  <rect y="60" width="80" height="15" fill="##000000" rx="10"></rect>
+              </svg>
+          </span>
+          <span class="text">BACK</span>
+      </button>
+      </a>
+        <div class="header-content">
+          <p> Best and Worst Bubble Tea Spots in Toronto</p>
+        </div>
+        <hr>
+          <div class="body-content">
+            <div class="bbt-container">
+                <img src="blogpics/bbt/gongcha.jpg" class="food-image">
+                <div class="bbt-review"> 
+                  <div class="bbt-description">
+                    <p> All Time Favorite: 1. Gong Cha</p>
+                    <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+                    <a href="https://gong-cha.ca/wp-content/uploads/2023/03/GC-Takeout-Menu_4x6_no-price.pdf">
+                      <button class="menu-button"> &#8801; Menu </button>
+                    </a>
+                    <p class="my-thoughts"> &#128172; 
+                      QQ PEACH GREEN TEA, LIGHT ICE, 30% SUGAR. Enough said.
+                    </p>
+                  </div>
+                </div>
+
+            </div>
+            
+
+            <div class="bbt-container">
+              <img src="blogpics/bbt/coco.jpg" class="food-image">
+              <div class="bbt-review"> 
+                <div class="bbt-description">
+                  <p> 2. CoCo </p>
+                  <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                  <a href="https://www.cocofreshtea.ca/menu/">
+                    <button class="menu-button"> &#8801; Menu </button>
+                  </a>
+                  <p class="my-thoughts"> &#128172; 
+                    COCO!!! The first time trying this chain I think was actually in China, before BBT became super popular in the West,
+                     so I'd consider myself an OG fan. This was my first time trying bbt so I'm obligated to place it in my top 3 but Coco never 
+                     dissapoints. I'd consider it one of my safer options, I know that what I'm getting isn't going to be out of this world,
+                     but it's also never gonna be bad. One thing I will say, SWITCH BACK TO YOUR PLASTIC CUPS. I need to see what im drinking. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bbt-container">
+              <img src="blogpics/bbt/cha-time.jpg" class="food-image">
+              <div class="bbt-review"> 
+                <div class="bbt-description">
+                  <p> 3. Chatime </p>
+                  <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+                  <a href="https://chatime.ca/our-drinks/">
+                    <button class="menu-button"> &#8801; Menu </button>
+                  </a>
+                  <p class="my-thoughts"> &#128172; 
+                    For the last time, its CHAtime not CHAItime. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bbt-container">
+              <img src="blogpics/bbt/preso-tea.jpg" class="food-image">
+              <div class="bbt-review"> 
+                <div class="bbt-description">
+                  <p> All Time Least Favorite: Preso Tea </p>
+                  <p class="stars">&#9733;&#9734;&#9734;&#9734;</p>
+                  <a href="https://www.presotea.ca/menu/">
+                    <button class="menu-button"> &#8801; Menu </button>
+                  </a>
+                  <p class="my-thoughts"> &#128172; 
+                    The memory of my first time trying Preso Tea has been burned into my brain like poisonous shards of hot metal. Around May 2023, I was in Markham with my parents,
+                    so I expected to get the HIGHEST quality of bubble tea, and I saw this little stand in the mall saying "Preso Tea". I'd never seen or heard of this bbt 
+                    spot before, so I thought to give it a try. I get one of my go-to orders, I think it was the passionfruit green tea with tapioca or something and my god, 
+                    was it a cup full of nothing. I always get 30% sugar but this drink tasted like straight coffee, and the pearls. They tasted like boiled cornstarch. 
+                    Absolutely 0 taste. No words could describe the dissapointement I felt at this moment. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bbt-container">
+              <img src="blogpics/bbt/realfruit.jpg" class="food-image">
+              <div class="bbt-review"> 
+                <div class="bbt-description">
+                  <p> Second Worst: Real Fruit  </p>
+                  <p class="stars">&#9733;&#9733;&#9734;&#9734;&#9734;</p>
+                  <a href="https://www.realfruitbubbletea.com/menu.html">
+                    <button class="menu-button"> &#8801; Menu </button>
+                  </a>
+                  <p class="my-thoughts"> &#128172; 
+                    Needs no introduction, when I see a plastic cup of yellow slush with a couple tapioca balls floating around, I know where this white person got their drink from.
+                    To be honest, there really isnt a valid reason I dislike this chain. I've had the mango slush drink whatever its called, and it isnt bad. The prices aren't insane,
+                    and the drinks aren't bad, its just... the vibe.  
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bbt-container">
+              <img src="blogpics/bbt/yi-fang.jpg" class="food-image">
+              <div class="bbt-review"> 
+                <div class="bbt-description">
+                  <p> Third Worst: YiFang  </p>
+                  <p class="stars">&#9733;&#9733;&#9733;&#9734;&#9734;</p>
+                  <a href="https://www.yifangteapnw.com/menu">
+                    <button class="menu-button"> &#8801; Menu </button>
+                  </a>
+                  <p class="my-thoughts"> &#128172; 
+                    The tapioca pearls at YiFang may are towards teethless members of society, because there is no reason they need to be that soft. 
+                    You could put them in my grandma's congee and she wouldn't notice anything different. The whole vibe and aesthetic of YiFang reminded me alot of
+                    Gong Cha so I wanted to give it a try, but safe to say they are not the same. 
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          
+
+
+
+          </div>
+
+        
+        </div>
+        <footer class="new_footer_area bg_color">
+          <div class="new_footer_top">
+              <div class="footer_bg">
+                  <div class="footer_bg_one"></div>
+                  <div class="footer_bg_two"></div>
+              </div>
+          </div>
+          <div class="footer_bottom">
+              <div class="container">
+                  <div class="row align-items-center">
+                      <div class="col-lg-6 col-sm-5 text-right">
+                          <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CityScape Glimpses</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </footer>
+
+
+	</body>
+</html>

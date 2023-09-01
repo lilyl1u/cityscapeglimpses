@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+		<style>
+			body{
+                font-family: Nunito, Arial;
+                margin: 0;
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+                padding: 2.4vw;
+                background: white;
+                border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+                box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            .home-button{
+                font-family: Nunito, Arial;
+                background-color: transparent;
+                font-weight:bold;
+                border:none;
+                color: rgb(14,14,14);
+                cursor: pointer;
+                position: absolute;
+                top: 1.8vw;
+                left: 5%;
+                font-size: 2vw;
+                padding: 0.5vw; 
+                border-radius: 10px;
+            }
+
+            .home-button:hover{
+                background-color: rgba(233, 228, 228, 0.723);
+            }
+
+            .category-button{
+                padding: 5px;
+                margin-right: 1.5vw;
+                background-color: transparent;
+                border:none;
+                font-family: Nunito, Arial;
+                font-size: 1.5vw;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            .category-button:hover{
+                background-color: rgba(233, 228, 228, 0.723);
+            }
+            .current-button{
+                padding: 5px;
+                margin-right: 1.5vw;
+                background-color: rgb(3, 13, 99);
+                color: white;
+                font-weight:  bold;
+                border:none;
+                font-family: Nunito, Arial;
+                font-size: 1.5vw;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            .current-button:hover{
+                background-color: rgb(3, 13, 99);
+            }
+
+			.content-header{
+				margin-top: 3vw;
+				margin-left: 2vw;
+				margin-right: 3vw;
+				display: flex;
+				align-items: center;
+			}
+
+			.content-header-text{
+				font-size: 1.5vw;
+				flex-grow: 1;
+			}
+
+            
+
+			.next-page-button{
+                margin-right: 1vw;
+                background-color: transparent;
+				font-size: 1.2vw;
+				font-family: Nunito;
+				border-radius: 3vw;
+				font-weight:bold;
+                padding-left: 2vw;
+                border-style: none;
+                padding-right: 2vw;
+				border-width: .1vw;
+				cursor: pointer;
+				transition: 0.25s ease;
+                box-shadow: .01vw .05vw .1vw;
+                box-shadow: rgb(129, 129, 142)
+			}
+			.next-page-button:hover{
+				opacity: 0.8;
+			}
+			.next-page-button:active{
+				text-decoration: underline;
+			}
+
+			.line{
+				margin-left: 2vw;
+				margin-right: 2vw;
+			}
+
+            .content{
+                margin-top: 2vw;
+                margin-left: 2.7vw;
+
+            }
+
+
+            .food-option1,
+            .food-option2,
+            .food-option3,
+            .food-option4{
+                margin-right: 2.7vw;
+                border: 0.2vw solid rgb(100,100,111,0.2);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+                border-radius: 10px;
+                transition: 0.25s ease;
+            }
+
+            .food-options-container{
+                display:flex;
+                margin-bottom: 2vw;
+            }
+
+            .food-image{
+                border-radius: 10px;
+                position: relative;
+                width: 100%;
+                height: 20vw;       
+            }
+
+            .restaurant-description{
+                text-decoration: none;
+                margin-left: 1vw;
+                line-height: .6vw;
+                cursor:pointer;
+            }
+            .restaurant-name{
+                position: relative;
+                width: 19.8vw;
+                /*border-style:dashed;
+                border-color: black; */
+                font-size: 1.2vw;
+                font-weight:bold;
+            }
+            .restaurant-details{
+                /*border-style:dashed;
+                border-color: black; */
+                width: 19.8vw;
+                font-weight: light;
+                font-size: 0.8vw;
+            }
+
+            .food-option1:hover,
+            .food-option2:hover,
+            .food-option3:hover,
+            .food-option4:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 10px;
+                font-weight: bold;
+            }
+            
+     
+
+		</style>
+	</head>
+
+	<body>
+
+        <div class="header">
+            <a href="index.html">
+              <button class="home-button">
+                CityScape Glimpses
+              </button>
+            </a>
+            <div class="categorry-buttons-container">
+              <a href="eats.html">
+                <button class="current-button">
+                  Eats
+                </button>
+              </a>
+              <a href="bubbletea.html">
+                <button class="category-button">
+                  Bubble Tea
+                </button>
+              </a>
+              <a href="grocery.html">
+                <button class="category-button">
+                  Grocery
+                </button>
+              </a>
+              <a href="shopping.html">
+                <button class="category-button">
+                  Shopping
+                </button>
+              </a>
+            </div>
+          </div>
+		<div class="content-header">
+			<h1 class="content-header-text"> Toronto: Showing 9-16 of 20 restaurants ($$)</h1>
+            <a href="eats.html">
+                <button class="next-page-button"> 
+                    Last Page
+                </button>
+            </a>
+            <a href="eats2.html">
+                <button href="eats3.html" class="next-page-button"> 
+                    No Next Page
+                </button>
+            </a>
+
+
+		</div>
+		<hr class="line">
+
+        <div class="content">
+            <div class="food-options-container">
+                <div class="food-option1">
+                    <a href="bukchangdongsoontofu.html">
+                        <img src="blogpics/eats/bukchang.jpg" class="food-image">
+
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Buk Chang Dong Soon Tofu</p>
+                            <p class="restaurant-details"> 691 Bloor St W, M6G 1L3</p>
+                            <p class="restaurant-details"> $$ &middot; Tofu Hot Pots </p>
+                        </div>
+                    </a>
+                </div> 
+                    <!-- restaurant number 2-->
+                <a href="missfu.html">
+                    <div class="food-option2">
+                        <img src="blogpics/eats/chengdu.jpg" class="food-image">
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Miss Fu in Cheng Du</p>
+                            <p class="restaurant-details">637 Yonge St, M4Y 1Z5</p>
+                            <p class="restaurant-details"> $$ &middot; Szechuan Cuisine</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- restaurant number 3-->
+                <div class="food-option3">
+                    <img src="blogpics/eats/daldongnae.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Daldongnae Korean BBQ</p>
+                        <p class="restaurant-details">361 Yonge St Second Floor, ON M5B 1S1 *</p>
+                        <p class="restaurant-details"> $$ &middot; KBBQ (no review yet) </p>
+                    </div>
+                </div>
+                <!-- restaurant number 4-->
+                <div class="food-option4">
+                    <img src="blogpics/eats/gyubee-grill.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Gyubee Japanese Grill</p>
+                        <p class="restaurant-details">157 Dundas St W, M5E 1B4 *</p>
+                        <p class="restaurant-details"> $$ &middot; Japanese (no review yet) </p>
+                    </div>
+                </div>
+            </div> 
+                <!-- ROW NUMBER 2-->
+            <div class="food-options-container">
+                <div class="food-option1">
+                    <img src="blogpics/eats/haidilao.jpg" class="food-image">
+
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Haidilao Hot Pot</p>
+                        <p class="restaurant-details">237 Yonge St, M5B 1N8 *</p>
+                        <p class="restaurant-details"> $ &middot; Chinese Hot Pot (no review yet)</p>
+                    </div>
+                </div> 
+
+                    <!-- restaurant number 6-->
+                <a href="mandarin.html">    
+                    <div class="food-option2">
+                        <img src="blogpics/eats/mandarin-buffet.jpg" class="food-image">
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Mandarin Restaurant</p>
+                            <p class="restaurant-details">2206 Eglinton Ave E, M1L 4S7</p>
+                            <p class="restaurant-details"> $$ &middot; Chinese & AYCE
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!-- restaurant number 7-->
+                <div class="food-option3">
+                    <img src="blogpics/eats/mimichinese.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> MIMI Chinese</p>
+                        <p class="restaurant-details">265 Davenport Rd, M5R 1J9</p>
+                        <p class="restaurant-details"> $$ &middot; Modern Chinese (no review yet)</p>
+                    </div>
+                </div>
+                <!-- restaurant number 8-->
+                <a href="springsushi.html">
+                    <div class="food-option4">
+                        <img src="blogpics/eats/springsushi.jpg" class="food-image">
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Spring Sushi Toronto</p>
+                            <p class="restaurant-details"> 10 Dundas St E #500, ON M5B 2G9</p>
+                            <p class="restaurant-details"> $S &middot; Japanese & AYCE</p>
+                        </div>
+                    </div>
+                </a>
+            </div> 
+            
+            
+            </div>
+        </div>
+    
+
+	</body>
+</html>

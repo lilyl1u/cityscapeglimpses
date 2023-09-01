@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+		<style>
+			body{
+                font-family: Nunito, Arial;
+                margin: 0;
+            }
+
+            html{
+                scroll-behavior: smooth;
+            }
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+                padding: 2.4vw;
+                background: white;
+                border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+                box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+            }
+
+            .home-button{
+                font-family: Nunito, Arial;
+                background-color: transparent;
+                font-weight:bold;
+                border:none;
+                color: rgb(14,14,14);
+                cursor: pointer;
+                position: absolute;
+                top: 1.8vw;
+                left: 5%;
+                font-size: 2vw;
+                padding: 0.5vw; 
+                border-radius: 10px;
+            }
+
+            .home-button:hover{
+                background-color: rgba(233, 228, 228, 0.723);
+            }
+
+            .category-button{
+                padding: 5px;
+                margin-right: 1.5vw;
+                background-color: transparent;
+                border:none;
+                font-family: Nunito, Arial;
+                font-size: 1.5vw;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            .category-button:hover{
+                background-color: rgba(233, 228, 228, 0.723);
+            }
+            .current-button{
+                padding: 5px;
+                margin-right: 1.5vw;
+                background-color: rgb(3, 13, 99);
+                color: white;
+                font-weight:  bold;
+                border:none;
+                font-family: Nunito, Arial;
+                font-size: 1.5vw;
+                cursor: pointer;
+                border-radius: 10px;
+            }
+
+            .current-button:hover{
+                background-color: rgb(3, 13, 99);
+            }
+			.content-header{
+				margin-top:4vw;
+				margin-left: 2vw;
+				margin-right: 3vw;
+				display: flex;
+			}
+
+			.content-header-text{
+				font-size: 1.7vw;
+				flex-grow: 1;
+			}
+
+
+
+			.line{
+				margin-left: 2vw;
+				margin-right: 2vw;
+			}
+
+      .content{
+        margin-top: 4vw;
+        margin-left: 10vw;
+      }
+
+
+            .food-option1,
+            .food-option2,
+            .food-option3{
+              width: 23vw;
+                margin-right: 2.7vw;
+                border: 0.2vw solid rgb(100,100,111,0.2);
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+                transition: 0.25s ease;
+            }
+
+            .food-options-container{
+                display:flex;
+                margin-bottom: 2vw;
+            }
+
+            .food-image{
+                position: relative;
+                width: 100%;
+                height: auto;       
+            }
+
+            .restaurant-description{
+                color: black;
+                text-decoration: none;
+                margin-left: 1vw;
+                line-height: .6vw;
+                cursor:pointer;
+                width: vw;
+            }
+            .restaurant-name{
+                position: relative;
+                width: 20vw;
+                /*border-style:dashed;
+                border-color: black; */
+                font-size: 1.2vw;
+                font-weight:bold;
+            }
+            .restaurant-details{
+                /*border-style:dashed;
+                border-color: black; */
+                width: 28vw;
+                font-weight: light;
+                font-size: 0.8vw;
+            }
+
+            .food-option1:hover,
+            .food-option2:hover,
+            .food-option3:hover{
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 10px;
+                font-weight: bold;
+            }
+
+            a:link { text-decoration: none; }
+            a:visited { text-decoration: none; }
+            a:hover { text-decoration: none; }
+            a:active { text-decoration: none; }
+
+            .btn {
+                margin-left: 1.5vw;
+                margin-top: -20px;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                transition: all 0.15s ease-in-out;
+                font-size: 15px;
+                font-family: Nunito, Arial;
+                font-weight: light;
+                display: flex;
+                align-items: center;
+                background: white;
+                color: black;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                box-shadow: 0 0 20px 0px #2e2e2e3a;
+            }
+
+            .btn .icon {
+                position: absolute;
+                height: 1px;
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.25s;
+            }
+
+            .btn .text {
+                transform: translateX(55px);
+            }
+
+            .btn:hover .icon {
+                width: 100px;
+            }
+
+            .btn:hover .text {
+                transition: all 0.5s;
+                opacity: 0;
+            }
+
+            .btn:focus {
+                outline: none;
+            }
+
+            .btn:active .icon {
+                transform: scale(0.85);
+            }
+      
+            .new_footer_top {
+          padding: 120px 0px 270px;
+          position: relative;
+            overflow-x: hidden;
+      }
+      .new_footer_area .footer_bottom {
+          padding-top: 5px;
+          padding-bottom: 50px;
+      }
+
+      .new_footer_top .company_widget .f_subscribe_two .btn_get {
+          border-width: 1px;
+          margin-top: 20px;
+      }
+
+      .new_footer_top .f_widget.about-widget .f_list li a:hover {
+          color: #5e2ced;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li {
+          margin-bottom: 11px;
+      }
+      .f_widget.about-widget .f_list li:last-child {
+          margin-bottom: 0px;
+      }
+      .f_widget.about-widget .f_list li {
+          margin-bottom: 15px;
+      }
+      .f_widget.about-widget .f_list {
+          margin-bottom: 0px;
+      }
+
+      .new_footer_top .f_social_icon a:hover {
+          background: #5e2ced;
+          border-color: #5e2ced;
+        color:white;
+      }
+      .new_footer_top .f_social_icon a + a {
+          margin-left: 4px;
+      }
+      .new_footer_top .f-title {
+          margin-bottom: 30px;
+          color: #263b5e;
+      }
+      .f_600 {
+          font-weight: 600;
+      }
+      .f_size_18 {
+          font-size: 18px;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          color: #4b505e;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li a {
+          color: #6a7695;
+      }
+
+
+      .new_footer_top .footer_bg {
+          position: absolute;
+          bottom: 0;
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+          width: 100%;
+          height: 266px;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_one {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+          width: 330px;
+          height: 105px;
+        background-size:100%;
+          position: absolute;
+          bottom: 0;
+          left: 30%;
+          -webkit-animation: myfirst 22s linear infinite;
+          animation: myfirst 22s linear infinite;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_two {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+        background-size:100%;
+          bottom: 0;
+          left: 38%;
+          position: absolute;
+          -webkit-animation: myfirst 30s linear infinite;
+          animation: myfirst 30s linear infinite;
+      }
+
+      .footer-bottom{
+        color: gray;
+      }
+
+      @-moz-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @-webkit-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+            
+     
+
+		</style>
+	</head>
+
+	<body>
+
+        <div class="header">
+            <a href="index.html">
+              <button class="home-button">
+                CityScape Glimpses
+              </button>
+            </a>
+            <div class="categorry-buttons-container">
+              <a href="eats.html">
+                <button class="category-button">
+                  Eats
+                </button>
+              </a>
+              <a href="bubbletea.html">
+                <button class="category-button">
+                  Bubble Tea
+                </button>
+              </a>
+              <a href="grocery.html">
+                <button class="category-button">
+                  Grocery
+                </button>
+              </a>
+              <a href="shopping.html">
+                <button class="current-button">
+                  Shopping
+                </button>
+              </a>
+            </div>
+          </div>
+		<div class="content-header">
+            <a href="home2.html">
+                <button class="btn">
+                  <span class="icon">
+                      <svg viewBox="0 0 175 80" width="40" height="40">
+                          <rect width="80" height="15" fill="##000000" rx="10"></rect>
+                          <rect y="30" width="80" height="15" fill="#000000" rx="10"></rect>
+                          <rect y="60" width="80" height="15" fill="##000000" rx="10"></rect>
+                      </svg>
+                  </span>
+                  <span class="text">BACK</span>
+              </button>
+              </a>
+			<h1 class="content-header-text"> &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; Unveiling The City's Best Retail Destinations (no reviews yet)</h1>
+
+		</div>
+		<hr class="line">
+
+        <div class="content">
+            <div class="food-options-container">
+                <a href="kiokiiand....html">
+                    <div class="food-option1">
+                        <img src="blogpics/shopping/kiokii.jpg" class="food-image">
+
+                        
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Kiokii And...</p>
+                            <p class="restaurant-details"> Multiple Locations</p>
+                            <p class="restaurant-details"> Cosmetics Store (click me)</p>
+                        </div>
+                        </a>
+                    </div>
+                </a> 
+                    <!-- restaurant number 2-->
+                <div class="food-option2">
+                    <img src="blogpics/shopping/sukoshi.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Sukoshi Mart</p>
+                        <p class="restaurant-details">Multiple Locations</p>
+                        <p class="restaurant-details"> Cosmetics Store</p>
+                    </div>
+                </div>
+                <!-- restaurant number 3-->
+                <div class="food-option3">
+                    <img src="blogpics/shopping/thefaceshop.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> The Face Shop</p>
+                        <p class="restaurant-details">Multiple Locations</p>
+                        <p class="restaurant-details"> Cosmetics Store</p>
+                    </div>
+                </div>
+
+            </div> 
+                <!-- ROW NUMBER 2-->
+            <div class="food-options-container">
+                <div class="food-option1">
+                    <img src="blogpics/shopping/muji.jpg" class="food-image">
+
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Muji</p>
+                        <p class="restaurant-details">Multiple Locations </p>
+                        <p class="restaurant-details"> Retail </p>
+                    </div>
+                </div> 
+
+                    <!-- restaurant number 6-->
+                <div class="food-option2">
+                    <img src="blogpics/shopping/mrpen.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Mr. Pen</p>
+                        <p class="restaurant-details"> 683 Bloor St W, M6G 1L3</p>
+                        <p class="restaurant-details"> Stationary
+                        </p>
+                    </div>
+                </div>
+                <!-- restaurant number 7-->
+                <div class="food-option3">
+                    <img src="blogpics/shopping/oomomo.jpg" class="food-image">
+                    <div class="restaurant-description">
+                        <p class="restaurant-name"> Oomomo</p>
+                        <p class="restaurant-details"> Multiple Locations</p>
+                        <p class="restaurant-details"> Lifestyle Products</p>
+                    </div>
+                </div>
+                <!-- restaurant number 8-->
+            </div> 
+                <!-- ROW NUMBER 3-->
+                <div class="food-options-container">
+                    <div class="food-option1">
+                        <img src="blogpics/shopping/miniso.jpg" class="food-image">
+    
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Miniso</p>
+                            <p class="restaurant-details"> Multiple Locations</p>
+                            <p class="restaurant-details"> Lifestyle </p>
+                        </div>
+                    </div> 
+    
+                        <!-- restaurant number 6-->
+                    <div class="food-option2">
+                        <img src="blogpics/shopping/benkeihime.jpg" class="food-image">
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Benkei Hime</p>
+                            <p class="restaurant-details"> Multiple Location</p>
+                            <p class="restaurant-details"> Apparel & Bubble Tea
+                            </p>
+                        </div>
+                    </div>
+                    <!-- restaurant number 7-->
+                    <div class="food-option3">
+                        <img src="blogpics/shopping/uni-qlo.jpg" class="food-image">
+                        <div class="restaurant-description">
+                            <p class="restaurant-name"> Uniqlo</p>
+                            <p class="restaurant-details">Multiple Locations</p>
+                            <p class="restaurant-details"> Apparel</p>
+                        </div>
+                    </div>
+                    <!-- restaurant number 8-->
+                </div> 
+            
+            
+            </div>
+        </div>
+        <footer class="new_footer_area bg_color">
+            <div class="new_footer_top">
+                <div class="footer_bg">
+                    <div class="footer_bg_one"></div>
+                    <div class="footer_bg_two"></div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-sm-5 text-right">
+                            <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CityScape Glimpses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </footer>
+
+	</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+    <style>
+			body{
+        font-family: Nunito, Arial;
+        margin: 0;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      button{
+        font-family: Nunito, Arial;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.4vw;
+        background: white;
+        border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+        box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+      }
+
+      .home-button{
+        font-family: Nunito, Arial;
+        background-color: transparent;
+        font-weight:bold;
+        border:none;
+        color: rgb(14,14,14);
+        cursor: pointer;
+        position: absolute;
+        top: 1.8vw;
+        left: 5%;
+        font-size: 2vw;
+        padding: 0.5vw; 
+        border-radius: 10px;
+      }
+
+      .home-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+
+      .category-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: transparent;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .category-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+      .row {
+        margin-top: 70px;
+        margin-left: 3px;
+        margin-right: 3px;
+        display: flex;
+      }
+
+      .column {
+        flex: 33.33%;
+        padding: 2px;
+      }
+
+      .content{
+        display: flex;
+        margin-top: 70px;
+        margin-left: 170px;
+        margin-right: 80px;
+      }
+
+      .body-container{
+        flex:1.5;
+        margin-right: 30px;
+
+      }
+
+      .restaurant-name{
+        font-size: 2vw;
+        font-weight: bold;
+      }
+
+      .restaurant-description{
+        font-weight: light;
+        color: rgb(97, 97, 109);
+        margin-top: -15px;
+        font-size: 1vw;
+        line-height:10px;
+      }
+
+      .review-container{
+        margin-top: 50px
+      }
+
+      .review-title{
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(23, 36, 77);
+      }
+
+      .menu-container{
+        height: 80px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        border-radius: 15px;
+        padding: 20px;
+        flex:0.5;
+      }
+
+      .menu-button{
+        background-color: rgb(23, 44, 111);
+        border-radius: 12px;
+        color: white;
+        padding: 4px;
+        padding-right: 10px;
+        padding-left: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        font-size: 13px;
+        transition: 0.15s ease;
+        cursor: pointer;
+      }
+      .menu-button:hover{
+        background-color: rgb(14, 26, 66);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+        <a href="index.html">
+          <button class="home-button">
+            CityScape Glimpses
+          </button>
+        </a>
+        <div class="categorry-buttons-container">
+          <a href="eats.html">
+            <button class="category-button">
+              Eats
+            </button>
+          </a>
+          <a href="bubbletea.html">
+            <button class="category-button">
+              Bubble Tea
+            </button>
+          </a>
+          <a href="grocery.html">
+            <button class="category-button">
+              Grocery
+            </button>
+          </a>
+          <a href="shopping.html">
+            <button class="category-button">
+              Shopping
+            </button>
+          </a>
+        </div>
+      </div>
+    <div class="row">
+      <div class="column">
+        <img src="blogpics/shopping/kiokii1.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="blogpics/shopping/kiokii2.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="blogpics/shopping/kiokii3.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="body-container">
+        <div class="restaurant-name">
+          <p> Kiokii And... </p>
+        </div>
+          <div class="restaurant-description">
+            <p> Multiple Locations</p>
+            <p>  Cosmetics </p>
+          </div>
+          <hr>
+        <div class="review-container">
+          <div class="review-title">
+            <p>Lily's Point of View</p>
+          </div>
+          <div class="review">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et 
+              dolore magna aliqua. Amet dictum sit amet justo donec. Facilisis gravida neque convallis a cras semper
+              auctor neque vitae. Eu non diam phasellus vestibulum lorem. Ut consequat semper viverra nam libero justo
+              laoreet sit. At in tellus integer feugiat scelerisque. Volutpat diam ut venenatis tellus in metus vulputate 
+              eu scelerisque. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Vestibulum mattis
+              ullamcorper velit sed ullamcorper. Nisl pretium fusce id velit ut tortor. Amet facilisis magna etiam
+              tempor orci eu lobortis elementum nibh. Amet purus gravida quis blandit turpis cursus in hac.
+              Phasellus egestas tellus rutrum tellus pellentesque eu. Interdum velit euismod in pellentesque massa.
+              Lacinia at quis risus sed vulputate. Enim eu turpis egestas pretium aenean pharetra magna ac. Cum sociis
+              natoque penatibus et magnis dis parturient montes nascetur. Nibh tortor id aliquet lectus proin. Cursus
+              turpis massa tincidunt dui. Quam elementum pulvinar etiam non quam lacus suspendisse. Sed libero enim 
+              sed faucibus. Nisi vitae suscipit tellus mauris a diam maecenas. Egestas egestas fringilla phasellus 
+              faucibus scelerisque eleifend donec pretium. Quis lectus nulla at volutpat diam ut venenatis tellus in.
+              Lorem mollis aliquam ut porttitor leo a diam sollicitudin. In egestas erat imperdiet sed euismod. Leo vel fringilla 
+              est ullamcorper eget nulla facilisi etiam dignissim.</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="menu-container">
+        <p class="menu-text"> Locations & More Information </p>
+        <a href="https://kiokii.com/pages/our-stores">
+        <button class="menu-button">
+          Discover More
+        </button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

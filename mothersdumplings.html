@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+    <style>
+			body{
+        font-family: Nunito, Arial;
+        margin: 0;
+      }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      button{
+        font-family: Nunito, Arial;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.4vw;
+        background: white;
+        border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+        box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+      }
+
+      .home-button{
+        font-family: Nunito, Arial;
+        background-color: transparent;
+        font-weight:bold;
+        border:none;
+        color: rgb(14,14,14);
+        cursor: pointer;
+        position: absolute;
+        top: 1.8vw;
+        left: 5%;
+        font-size: 2vw;
+        padding: 0.5vw; 
+        border-radius: 10px;
+      }
+
+      .home-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+
+      .category-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: transparent;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .category-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+      .current-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: rgb(3, 13, 99);
+        color: white;
+        font-weight:  bold;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .current-button:hover{
+        background-color: rgb(3, 13, 99);
+      }
+
+      .row {
+        margin-top: 70px;
+        margin-left: 3px;
+        margin-right: 3px;
+        display: flex;
+      }
+
+      .column {
+        flex: 33.33%;
+        padding: 2px;
+      }
+
+      .content{
+        display: flex;
+        margin-top: 70px;
+        margin-left: 170px;
+        margin-right: 80px;
+      }
+
+      .body-container{
+        flex:1.5;
+        margin-right: 30px;
+
+      }
+
+      .restaurant-name{
+        font-size: 2vw;
+        font-weight: bold;
+      }
+
+      .restaurant-description{
+        font-weight: light;
+        color: rgb(97, 97, 109);
+        margin-top: -15px;
+        font-size: 1vw;
+        line-height:10px;
+      }
+
+      .review-container{
+        margin-top: 50px
+      }
+
+      .review-title{
+        font-size: 50px;
+        font-weight: bold;
+        color: rgb(23, 36, 77);
+      }
+
+      .menu-container{
+        height: 80px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: gray;
+        border-radius: 15px;
+        padding: 20px;
+        flex:0.5;
+      }
+
+      .menu-button{
+        background-color: rgb(23, 44, 111);
+        border-radius: 12px;
+        color: white;
+        padding: 4px;
+        padding-right: 10px;
+        padding-left: 10px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        font-size: 13px;
+        transition: 0.15s ease;
+        cursor: pointer;
+      }
+      .menu-button:hover{
+        background-color: rgb(14, 26, 66);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html">
+        <button class="home-button">
+          CityScape Glimpses
+        </button>
+      </a>
+      <div class="categorry-buttons-container">
+        <a href="eats.html">
+          <button class="current-button">
+            Eats
+          </button>
+        </a>
+        <a href="bubbletea.html">
+          <button class="category-button">
+            Bubble Tea
+          </button>
+        </a>
+        <a href="grocery.html">
+          <button class="category-button">
+            Grocery
+          </button>
+        </a>
+        <a href="shopping.html">
+          <button class="category-button">
+            Shopping
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img src="blogpics/eats/mothersdumplings1.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="blogpics/eats/mothersdumplings2.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="blogpics/eats/mothersdumplings3.jpg" alt="Restaurant Photo" style="width:100%">
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="body-container">
+        <div class="restaurant-name">
+          <p> Mother's Dumplings </p>
+        </div>
+          <div class="restaurant-description">
+            <p> 421 Spadina Ave, ON M5T 2G6</p>
+            <p>  $ &middot; Dumplings </p>
+          </div>
+          <hr>
+        <div class="review-container">
+          <div class="review-title">
+            <p>Lily's Point of View</p>
+          </div>
+          <div class="review">
+            <p>I've only gone here once, but I would say their dumplings are pretty average. They aren't too expensive ranging from around 1.20-1.50$ a piece, 
+              but they also aren't very memorable. Tastes like what you would expect boiled dumplings to taste like. The skin is defintely a little thick compared to 
+              some other dimsum places around Chinatown, but I didn't mind it much because I actually prefer my dumpling skin to have a bit of chewiness to it. I wouldn't
+              say Mother's Dumplings is a go-to in Chinatown but it is definetly worth a try to see how you feel about it. 
+              <br> <br> <br> <br> <br> <br> <br> <br>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="menu-container">
+        <p class="menu-text"> Menu and more information: </p>
+        <a href="https://mothersdumplings.com/menu">
+        <button class="menu-button">
+          Menu & More
+        </button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

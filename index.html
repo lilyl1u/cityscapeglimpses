@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="blogpics/favicofinal.png">
+		<style>
+			body{
+        font-family: Nunito, Arial;
+        margin: 0;
+
+        }
+
+      html{
+        scroll-behavior: smooth;
+      }
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 2.4vw;
+        background: white;
+        border-bottom: 0.2vw solid rgb(100,100,111,0.2);
+        box-shadow: rgba(150, 150, 163, 0.2) 0px 5px 19px 2px;
+      }
+
+      .home-button{
+        font-family: Nunito, Arial;
+        background-color: transparent;
+        font-weight:bold;
+        border:none;
+        color: rgb(14,14,14);
+        cursor: pointer;
+        position: absolute;
+        top: 1.8vw;
+        left: 5%;
+        font-size: 2vw;
+        padding: 0.5vw; 
+        border-radius: 10px;
+      }
+
+      .home-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+
+      .category-button{
+        padding: 5px;
+        margin-right: 1.5vw;
+        background-color: transparent;
+        border:none;
+        font-family: Nunito, Arial;
+        font-size: 1.5vw;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+
+      .category-button:hover{
+        background-color: rgba(233, 228, 228, 0.723);
+      }
+
+
+      .content{
+        margin-top: 5vw;
+        margin-left: 2.7vw;
+      }
+
+      .slogan-container{
+        width: 35vw;
+        position: absolute;
+        top: 140px;
+        left: 50%;
+      }
+
+      .slogan{
+        font-size: 3.2vw;
+        color: rgb(14,14,14);
+        font-weight: bold;
+        text-align: right;
+      }
+
+
+      .option1,
+      .option2{
+        margin-right: 2.7vw;
+        border: 0.2vw solid rgb(100,100,111,0.2);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 9px 0px;
+        border-radius: 10px;
+        cursor:pointer;
+        transition: 0.25s ease;
+      }
+
+      .options-container{
+        height: 15vw;
+        display:flex;
+        margin-bottom: 2vw;
+      }
+
+      .option-image{
+        border-radius: 10px;
+        position: relative;
+        height: 15vw;       
+      }
+
+      .option1:hover,
+      .option2:hover{
+        box-shadow: rgba(64, 64, 84, 0.3) 2px 7px 9px 10px;
+        font-size: 2.4vw;
+      }
+
+      .option1:active,
+      .option2:active{
+        font-weight: light;
+      }
+
+      .option-title{
+        position:relative;
+        top: -67%;
+        text-align: center;
+        color: white;
+        font-size: 1.6vw;
+        text-decoration: none;
+      }
+
+      .rotating-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: rgb(74, 78, 105);
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 2.2vw;
+      
+      }
+
+      .rotating-header span {
+        position: relative;
+        display: inline-block;
+        color: rgb(20, 33, 61);
+        height: 1.25em;
+        vertical-align: bottom;
+        overflow: hidden;
+      }
+
+      .rotating-header span > span {
+        display: block;
+        animation: animateWords 15s infinite ease;
+      }
+
+      @keyframes animateWords {
+        0%{
+          transform: translateY(0%);
+        }
+
+        25%{
+          transform: translateY(-100%);
+        }
+
+        50%{
+          transform:translateY(-200%);
+        }
+
+        75%{
+          transform: translateY(-300%);
+        }
+
+        100%{
+          transform:translateY(-400%);
+        }
+      }
+      .animate-words {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .bottom-list {
+        position: absolute;
+        left: 30%;
+        padding: 2vw;
+      }
+
+      .animate-words li {
+        font-size: 3vw;
+        letter-spacing: 1vw;
+        text-shadow: none;
+        animation: animate-words 15s infinite ease;
+        padding: 0 1vw;
+        z-index: 1;
+      }
+      @keyframes animate-words {
+        0% {
+          color: rgb(34, 34, 59);
+          text-shadow: none;
+        }
+        18% {
+          color: rgb(34, 34, 59);
+          text-shadow: none;
+        }
+        20% {
+          color: rgb(201, 173, 167);
+          text-shadow: 0 0 .7vw rgb(201, 173, 167), 0 0 2vw rgb(74,78,105);
+        }
+        30% {
+          color: rgb(34, 34, 59);
+          text-shadow: none;
+        }
+        35% {
+          color: rgb(201, 173, 167);
+          text-shadow: 0 0 .7vw rgb(201, 173, 167), 0 0 2vw rgb(74,78,105);
+        }
+        70% {
+          color: rgb(34, 34, 59);
+          text-shadow: none;
+        }
+        85% {
+          color: rgb(201, 173, 167);
+          text-shadow: 0 0 .7vw rgb(201, 173, 167), 0 0 2vw rgb(74,78,105);
+        }
+        90% {
+          color: rgb(34, 34, 59);
+          text-shadow: none;
+        }
+        100% {
+          color: rgb(201, 173, 167);
+          text-shadow: 0 0 .7vw rgb(201, 173, 167), 0 0 2vw rgb(74,78,105);
+        }
+      }
+
+      ul li:nth-child(1){
+        animation-delay: .1s;
+      }
+      ul li:nth-child(2){
+        animation-delay: .2s;
+      }
+      ul li:nth-child(3){
+        animation-delay: .3s;
+      }
+      ul li:nth-child(4){
+        animation-delay: .4s;
+      }
+      ul li:nth-child(5){
+        animation-delay: .5s;
+      }
+      ul li:nth-child(6){
+        animation-delay: .6s;
+      }
+      ul li:nth-child(7){
+        animation-delay: .7s;
+      }
+      ul li:nth-child(8){
+        animation-delay: .8s;
+      }
+      .my-image{
+        width: 35%;
+        margin-top: 0vw;
+        border-radius: 50%;
+        filter:brightness(80%);
+        transition: 0.5s ease-in-out;
+      }
+
+      .my-image:hover{
+        filter:brightness(120%);
+        box-shadow: .2vw .3vw 2vw .3vw rgb(18, 28, 49);
+      }
+
+      .about-me-container {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 15vw;
+        margin-left: -6vw;
+      }
+
+      .introduction1 {
+        font-weight: bold;
+        letter-spacing: 0.3vw;
+        font-size: 1.2vw;
+        color: rgb(34, 34, 59);
+        margin-top: -2.7vw;
+      }
+
+      .introduction2 {
+        margin-left: 2.3vw;
+        color: rgb(33, 44, 121);
+        font-size: 1.7vw;
+      }
+
+      .introduction3{
+        margin-left: 3vw;
+        color: rgb(18, 28, 49);
+        font-size: 1vw;
+        line-height: 2vw;
+      }
+      
+      .introduction4{
+        margin-left: 3vw;
+        color: black;
+        font-size: 1vw;
+        margin-right: 4vw;
+        line-height: 1.8vw;
+      }
+
+            
+      .new_footer_top {
+          padding: 120px 0px 270px;
+          position: relative;
+            overflow-x: hidden;
+      }
+      .new_footer_area .footer_bottom {
+          padding-top: 5px;
+          padding-bottom: 50px;
+      }
+
+      .new_footer_top .company_widget .f_subscribe_two .btn_get {
+          border-width: 1px;
+          margin-top: 20px;
+      }
+
+      .new_footer_top .f_widget.about-widget .f_list li a:hover {
+          color: #5e2ced;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li {
+          margin-bottom: 11px;
+      }
+      .f_widget.about-widget .f_list li:last-child {
+          margin-bottom: 0px;
+      }
+      .f_widget.about-widget .f_list li {
+          margin-bottom: 15px;
+      }
+      .f_widget.about-widget .f_list {
+          margin-bottom: 0px;
+      }
+
+      .new_footer_top .f_social_icon a:hover {
+          background: #5e2ced;
+          border-color: #5e2ced;
+        color:white;
+      }
+      .new_footer_top .f_social_icon a + a {
+          margin-left: 4px;
+      }
+      .new_footer_top .f-title {
+          margin-bottom: 30px;
+          color: #263b5e;
+      }
+      .f_600 {
+          font-weight: 600;
+      }
+      .f_size_18 {
+          font-size: 18px;
+      }
+      h1, h2, h3, h4, h5, h6 {
+          color: #4b505e;
+      }
+      .new_footer_top .f_widget.about-widget .f_list li a {
+          color: #6a7695;
+      }
+
+
+      .new_footer_top .footer_bg {
+          position: absolute;
+          bottom: 0;
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEigB8iI5tb8WSVBuVUGc9UjjB8O0708X7Fdic_4O1LT4CmLHoiwhanLXiRhe82yw0R7LgACQ2IhZaTY0hhmGi0gYp_Ynb49CVzfmXtYHUVKgXXpWvJ_oYT8cB4vzsnJLe3iCwuzj-w6PeYq_JaHmy_CoGoa6nw0FBo-2xLdOPvsLTh_fmYH2xhkaZ-OGQ/s16000/footer_bg.png") no-repeat scroll center 0;
+          width: 100%;
+          height: 266px;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_one {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEia0PYPxwT5ifToyP3SNZeQWfJEWrUENYA5IXM6sN5vLwAKvaJS1pQVu8mOFFUa_ET4JuHNTFAxKURFerJYHDUWXLXl1vDofYXuij45JZelYOjEFoCOn7E6Vxu0fwV7ACPzArcno1rYuVxGB7JY6G7__e4_KZW4lTYIaHSLVaVLzklZBLZnQw047oq5-Q/s16000/volks.gif") no-repeat center center;
+          width: 330px;
+          height: 105px;
+        background-size:100%;
+          position: absolute;
+          bottom: 0;
+          left: 30%;
+          -webkit-animation: myfirst 22s linear infinite;
+          animation: myfirst 22s linear infinite;
+      }
+
+      .new_footer_top .footer_bg .footer_bg_two {
+          background: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhyLGwEUVwPK6Vi8xXMymsc-ZXVwLWyXhogZxbcXQYSY55REw_0D4VTQnsVzCrL7nsyjd0P7RVOI5NKJbQ75koZIalD8mqbMquP20fL3DxsWngKkOLOzoOf9sMuxlbyfkIBTsDw5WFUj-YJiI50yzgVjF8cZPHhEjkOP_PRTQXDHEq8AyWpBiJdN9SfQA/s16000/cyclist.gif") no-repeat center center;
+          width: 88px;
+          height: 100px;
+        background-size:100%;
+          bottom: 0;
+          left: 38%;
+          position: absolute;
+          -webkit-animation: myfirst 30s linear infinite;
+          animation: myfirst 30s linear infinite;
+      }
+
+      .footer-bottom{
+        color: gray;
+      }
+
+      @-moz-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @-webkit-keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+      @keyframes myfirst {
+        0% {
+          left: -25%;
+        }
+        100% {
+          left: 100%;
+        }
+      }
+
+		</style>
+	</head>
+
+	<body>
+    <div class="header">
+      <a href="Home.html">
+        <button class="home-button">
+          CityScape Glimpses
+        </button>
+      </a>
+      <div class="categorry-buttons-container">
+        <a href="eats.html">
+          <button class="category-button">
+            Eats
+          </button>
+        </a>
+        <a href="bubbletea.html">
+          <button class="category-button">
+            Bubble Tea
+          </button>
+        </a>
+        <a href="grocery.html">
+          <button class="category-button">
+            Grocery
+          </button>
+        </a>
+        <a href="shopping.html">
+          <button class="category-button">
+            Shopping
+          </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="slogan-container">
+        <p class="slogan">
+          A Chinese Canadian's Honest Take on Everything East-Asian in Toronto
+        </p>
+        <div>
+          <h1 class="rotating-header"> 
+            Your next spot for &nbsp;
+            <span>
+              <span>Bubble Tea</span>
+              <span>Dim Sum</span>
+              <span>K-Beauty</span>
+              <span>Badminton</span>
+              <span>Sushi</span>
+              <span> AYCE Buffets</span>
+              <span> Grocery </span>
+
+            </span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="options-container">
+          <div class="option1">
+              <a href="eats.html">               
+                <img src="blogpics/asian-food-final.jpg" class="option-image">
+                <h2 class="option-title">
+                  Eats
+                </h2>
+              </a>
+          </div> 
+          <div class="option2">
+            <a href="bubbletea.html">
+                <img src="blogpics/bubbletea-final.jpg" class="option-image">
+                <h2 class="option-title">
+                  Bubble Tea
+                </h2>
+            </a>
+          </div>
+      </div> 
+                <!-- ROW NUMBER 2-->
+      <div class="options-container">
+        <div class="option1">
+          <a href="grocery.html">
+            <img src="blogpics/grocery-final.jpg" class="option-image">
+            <h2 class="option-title">
+              Grocery
+            </h2>
+          </a>
+        </div> 
+        <div class="option2">
+          <a href="shopping.html">
+            <img src="blogpics/shopping-final.jpg" class="option-image">
+            <h2 class="option-title">
+              Shopping
+            </h2>
+          </a>
+        </div>
+      </div>
+
+
+                 
+      <div class="bottom-list">
+          <ul class="animate-words">
+            <li>A</li>
+            <li>B</li>
+            <li>O</li>
+            <li>U</li>
+            <li>T</li>
+            <li>M</li>
+            <li>E</li>
+            <li>&darr;</li>
+          </ul>
+        </div>
+        <div class="about-me-container">
+          <img src="blogpics/me.jpg" class="my-image">
+          <div class="introduction-container">
+            <p class="introduction1">
+              &nbsp; -ABOUT ME-------
+            </p>
+            <p class="introduction2">
+              Hi! My name is Lily Liu and I'm a Chinese Canadian teenager currently living in Toronto. 
+            </p>
+            <p class="introduction3">
+              <u>Age: </u>16 (turning 17 on December 3rd!)
+              <br>
+              <u>Favorite Movie(s):</u> Interstellar, Imitation Game
+              <br>
+              <u>Favorite Food(s):</u> Fresh Spring Rolls (not the fried ones), Youtiao (the fried ones)
+              <br> 
+              <u>Least Favorite Food(s):</u> ANYTHING with Alfredo sauce, Kraft Dinner 
+              <br>
+              <u>Bucket List:</u> Christmas in NYC
+              <br>
+              <u>Favorite Subjects:</u> Math, Computer Science, Chemistry
+              <br>
+              <u>Least Favorite Subjects:</u> English
+              <br>
+              <u>Favorite Books:</u> Percy Jackson and the Olympians, Perks of Being a Wallflower
+            </p>
+    
+            <p class="introduction4">
+              <br>
+              &nbsp; &nbsp; <b>A</b>
+              s I'm sure any other second-gen asian immigrant understands, I was used to hearing phrases from my classmates like 
+              "why does your food smell so weird?". Little experiences like these made it difficult for me to find appreciation and 
+              love for my culture. However, with time, introspection, and a few special people, I gradually began to recognize
+              the beauty and strength in embracing my unique identity. 
+              <br>  
+              &nbsp; &nbsp; So I created this "blog review website" whatever you want to call it, in hopes that I can share the amazing (and maybe not so amazing) East 
+              Asian restaurants/shopping/cafe spots that I've visited throughout my life.
+              <br> <br>
+            </p>
+          </div>
+        </div>
+    
+    </div>
+
+    <footer class="new_footer_area bg_color">
+      <div class="new_footer_top">
+          <div class="footer_bg">
+              <div class="footer_bg_one"></div>
+              <div class="footer_bg_two"></div>
+          </div>
+      </div>
+      <div class="footer_bottom">
+          <div class="container">
+              <div class="row align-items-center">
+                  <div class="col-lg-6 col-sm-5 text-right">
+                      <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; CityScape Glimpses</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+	</body>
+</html>
